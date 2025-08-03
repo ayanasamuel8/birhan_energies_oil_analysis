@@ -46,26 +46,53 @@ pip install -r requirements.txt
 
 ---
 
-## 3️⃣ **Project Status & Roadmap**
+## 3️⃣ **Project Structure**
+
+The repository is organized to separate data, notebooks, and source code for clarity.
+
+```
+birhan_energies_oil_analysis/
+├── 📂 data/
+│   ├── 📄 compiled/
+│   │   └── events.csv         # Compiled list of major geopolitical/economic events
+│   └── 📄 raw/
+│       └── brent_prices.csv   # Raw Brent oil price time series data
+│
+├── 📂 notebooks/
+│   ├── 📓 01_data_preparation_and_eda.ipynb
+│   └── 📓 02_bayesian_changepoint_model.ipynb
+│
+├── 📂 src/
+│   └── # Python source code for models or utilities (if any)
+│
+├── 📜 .gitignore
+├── 📜 README.md              # You are here!
+├── 📜 requirements.txt        # Project dependencies
+└── 🧪 venv/                    # Virtual environment directory
+```
+
+---
+
+## 4️⃣ **Project Status & Roadmap**
 
 The project is divided into three main phases. The **initial foundational work** (Task 1) is complete, and we are moving toward modeling. 🚀
 
 * \[✅] **Task 1:** Foundational Analysis & Planning
-  → Defined workflow, researched events, documented assumptions
+    → Defined workflow, researched events, documented assumptions
 * \[⏳] **Task 2:** Change Point Modeling (Next Step)
-  → Implement Bayesian models using PyMC to detect breaks
+    → Implement Bayesian models using PyMC to detect breaks
 * \[⬜] **Task 3:** Interactive Dashboard (Future Work)
-  → Build a Flask + React interface to explore results
+    → Build a Flask + React interface to explore results
 
 ---
 
-## 4️⃣ **Task 1 Deliverable: The Analytical Framework**
+## 5️⃣ **Task 1 Deliverable: The Analytical Framework**
 
 This section covers the major outputs from the foundational analysis phase.
 
 ---
 
-### 4.1 📅 **Compiled Event Data**
+### 5.1 📅 **Compiled Event Data**
 
 A core part of this task was researching major events relevant to the oil market.
 
@@ -74,24 +101,24 @@ A core part of this task was researching major events relevant to the oil market
 
 ---
 
-### 4.2 🗺️ **Defined Data Analysis Workflow**
+### 5.2 🗺️ **Defined Data Analysis Workflow**
 
 A step-by-step plan from raw data to insights:
 
 1. **🧹 Data Preparation and EDA:**
-   Load, clean, visualize, and transform the data (e.g., log returns); test for stationarity.
+     Load, clean, visualize, and transform the data (e.g., log returns); test for stationarity.
 2. **🤔 Event Hypothesis Formulation:**
-   Use `events.csv` to hypothesize structural breaks around known impactful events (e.g., 2008 Crisis).
+     Use `events.csv` to hypothesize structural breaks around known impactful events (e.g., 2008 Crisis).
 3. **⚙️ Bayesian Change Point Modeling:**
-   Implement a PyMC model to infer structural changes in mean/variance of oil prices.
+     Implement a PyMC model to infer structural changes in mean/variance of oil prices.
 4. **💡 Insight Generation & Impact Quantification:**
-   Compare detected breaks with known events. Quantify "before vs. after" shifts.
+     Compare detected breaks with known events. Quantify "before vs. after" shifts.
 5. **📤 Communication and Delivery:**
-   Consolidate findings in a report + dashboard for stakeholder insights.
+     Consolidate findings in a report + dashboard for stakeholder insights.
 
 ---
 
-### 4.3 ⚠️ **Identified Assumptions and Limitations**
+### 5.3 ⚠️ **Identified Assumptions and Limitations**
 
 Acknowledging the boundaries of the analysis is essential.
 
@@ -105,9 +132,9 @@ Acknowledging the boundaries of the analysis is essential.
 #### 🔍 Limitations: Correlation ≠ Causation ❗️
 
 * **✅ What the model gives:**
-  Probabilities of structural breaks. If aligned with events, it shows strong **temporal correlation** 🔗.
+    Probabilities of structural breaks. If aligned with events, it shows strong **temporal correlation** 🔗.
 * **🚫 What it doesn't give:**
-  Proof that an event **caused** the price shift. Correlation may be spurious or influenced by unseen variables.
+    Proof that an event **caused** the price shift. Correlation may be spurious or influenced by unseen variables.
 
 🔬 *Proving causality is outside this project’s scope.*
 Our goal: provide **data-driven evidence** to **support or challenge hypotheses** about event impacts. 🎯
