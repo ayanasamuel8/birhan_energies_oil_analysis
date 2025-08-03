@@ -20,4 +20,4 @@ def save_data(df: pd.DataFrame, file_path: str) -> None:
     df (pd.DataFrame): The DataFrame to save.
     file_path (str): The path where the DataFrame will be saved.
     """
-    df.to_csv(file_path, index=False)
+    df.to_csv(file_path, index=True)
