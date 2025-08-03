@@ -1,0 +1,21 @@
+EventDate,EventName,EventType,Description
+1987-10-19,Black Monday,Financial Crisis,A global stock market crash triggered fears of a worldwide recession, reducing expectations for future oil demand.
+1990-08-02,Iraq Invades Kuwait (Gulf War),Geopolitical Conflict,Iraq's invasion of Kuwait caused a massive oil price spike due to fears of a prolonged and widespread Middle East conflict.
+1991-02-28,End of Gulf War,Geopolitical Conflict,A US-led coalition declared a ceasefire, ending the conflict and causing oil prices to fall as supply fears eased.
+1997-07-02,Asian Financial Crisis,Financial Crisis,"A series of currency devaluations, starting in Thailand, triggered a severe economic slowdown across Asia, sharply reducing oil demand."
+1998-03-11,OPEC Production Cut,OPEC Policy,In response to falling prices from the Asian crisis, OPEC and other producers agreed to cut output to stabilize the market.
+2000-03-10,Dot-com Bubble Burst,Financial Crisis,The collapse of the tech bubble negatively impacted global financial markets and sentiment, affecting commodity demand.
+2001-09-11,September 11 Attacks,Security Incident,"Terrorist attacks in the US created extreme market uncertainty, causing a brief price spike followed by a sharp drop on fears of a global recession."
+2002-12-02,Venezuelan General Strike,Supply Disruption,"A major strike halted most of Venezuela's oil production, a key global supplier, removing significant supply from the market."
+2003-03-20,US-led Invasion of Iraq,Geopolitical Conflict,"The start of the Iraq War created significant uncertainty over Middle Eastern supply, leading to increased price volatility."
+2005-08-29,Hurricane Katrina,Supply Disruption,The hurricane caused major damage to oil production facilities and refineries in the U.S. Gulf of Mexico, spiking prices.
+2008-09-15,Lehman Brothers Collapse,Financial Crisis,"The bankruptcy triggered the most severe phase of the Global Financial Crisis, causing a catastrophic collapse in global oil demand and prices."
+2010-04-20,BP Deepwater Horizon Spill,Supply Disruption,The explosion and subsequent moratorium on new deepwater drilling in the Gulf of Mexico impacted US supply projections.
+2014-11-27,OPEC Defends Market Share,OPEC Policy,"In a landmark decision, OPEC opted not to cut production to counter rising US shale output, triggering a sustained price collapse."
+2018-05-08,US Exits Iran Nuclear Deal,Policy Change,The US unilaterally withdrew from the deal and re-imposed sanctions on Iran's energy sector, threatening its oil exports.
+2019-09-14,Saudi Aramco Drone Attack,Supply Disruption,"Drone strikes on the Abqaiq and Khurais facilities temporarily knocked out over 5% of global oil supply, causing the largest single-day price surge in years."
+2020-03-08,OPEC+ Price War Begins,OPEC Policy,"The collapse of an OPEC+ agreement led Saudi Arabia and Russia to flood the market with oil, initiating a price war."
+2020-04-20,COVID-19 Global Demand Collapse,Health Crisis,"Global lockdowns from the pandemic caused an unprecedented drop in mobility and oil demand, with WTI prices briefly turning negative."
+2021-03-23,Ever Given Blocks Suez Canal,Supply Chain Shock,The container ship blocked the critical trade route for nearly a week, delaying oil shipments and causing a temporary price increase.
+2022-02-24,Russia Invades Ukraine,Geopolitical Conflict,"The invasion by Russia, a top global oil and gas producer, sparked fears of massive energy supply disruptions and led to extreme price spikes."
+2022-03-31,US Strategic Petroleum Reserve Release,Policy Change,"In response to high prices, the Biden administration announced the largest-ever release from the US strategic reserves to increase supply."
