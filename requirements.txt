@@ -6,6 +6,7 @@ jupyter
 pymc
 ipykernel
 arviz
+statsmodels
 # statsmodels
 # flask
 # flask-cors

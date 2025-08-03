@@ -101,6 +101,43 @@ A core part of this task was researching major events relevant to the oil market
 
 ---
 
+## 6️⃣ **Data Exploration & EDA**
+
+This phase involved a thorough exploration and cleaning of the Brent Oil Prices dataset, leveraging custom utility functions from `src/utils.py` and detailed analysis in the notebook `notebooks/01_eda_exploration.ipynb`.
+
+### 6.1 **Data Loading & Inspection**
+
+- Data is loaded using the `load_data` function from `src/utils.py`.
+- The dataset contains 9,011 rows with two columns: `Date` and `Price`, with no missing values.
+
+### 6.2 **Date Format Analysis**
+
+- Two date formats identified in the `Date` column:
+    - `ddmmyy` (e.g., `20-May-87`): 8,360 entries
+    - `mmddyy` (e.g., `Nov 08, 2022`): 651 entries
+- No entries in other formats, ensuring consistency.
+
+### 6.3 **Data Cleaning & Preparation**
+
+- The `Date` column is cleaned and converted to datetime objects, then set as the DataFrame index.
+- Data is sorted chronologically for time series analysis.
+
+### 6.4 **Visualization & Stationarity Testing**
+
+- The raw price series is plotted, showing clear trends and volatility.
+- Daily log returns are calculated and visualized, appearing stationary and centered around zero.
+- Augmented Dickey-Fuller (ADF) tests:
+    - **Raw Price Series:** Non-stationary (p-value > 0.05)
+    - **Log Return Series:** Stationary (p-value << 0.05)
+
+### 6.5 **Key Insights**
+
+- The dataset is clean and well-structured for time series analysis.
+- The price series is non-stationary, while log returns are stationary, which is typical for financial time series.
+- This EDA sets the stage for further modeling and forecasting tasks.
+
+---
+
 ### 5.2 🗺️ **Defined Data Analysis Workflow**
 
 A step-by-step plan from raw data to insights:
