@@ -1,137 +1,113 @@
-# 📈 Analysis of Brent Oil Prices: Identifying Structural Breaks with Bayesian Change Point Models
+# 📈 **Analysis of Brent Oil Prices: Identifying Structural Breaks with Bayesian Change Point Models**
 
 **🏢 Project for:** Birhan Energies
-**📌 Status:** Phase 1 - Data Exploration and Analysis Planning *(In Progress)*
+**📌 Status:** Phase 1 (Foundational Analysis) ✅ *Complete*
 
 ---
 
-## 1️⃣ Business Objective
+## 1️⃣ **Business Objective**
 
-This project aims to analyze the historical prices of Brent crude oil to identify statistically significant **structural breaks** in the time series.
+This project analyzes the historical prices of Brent crude oil to identify statistically significant structural breaks in the time series.
 
-🎯 The primary goal is to associate these **change points** with major:
+🎯 The primary goal is to associate these change points with major:
 
-* 🌍 Geopolitical events
-* 🛢️ OPEC policy decisions
-* 🌐 Global economic shocks
+* 🌍 **Geopolitical events**
+* 🛢️ **OPEC policy decisions**
+* 🌐 **Global economic shocks**
 
-📊 Insights from this analysis will provide **Birhan Energies** with **data-driven intelligence** to support strategic advice for investors, policymakers, and other energy stakeholders.
-
----
-
-## 2️⃣ Project Structure
-
-🗂️ The repository is organized to keep data, notebooks, source code, and reports modular and easy to manage:
-
-```
-.
-├── data/
-│   ├── brent_oil_prices.csv       # Raw daily prices (1987–2022)
-│   └── events.csv                 # Curated list of major global events
-├── notebooks/
-│   └── 01_data_exploration.ipynb  # Initial EDA and stationarity analysis
-├── reports/
-│   └── (Upcoming)                 # For interim and final reports
-├── src/
-│   └── (Upcoming)                 # For dashboard backend (Flask) and frontend (React)
-├── .gitignore
-├── README.md                      # You are here
-└── requirements.txt               # Project dependencies
-```
+📊 The resulting insights will provide **Birhan Energies** with data-driven intelligence to support strategic advice for investors, policymakers, and other stakeholders in the energy sector.
 
 ---
 
-## 3️⃣ Data Sources
+## 2️⃣ **Setup and Installation**
 
-📁 **`brent_oil_prices.csv`**
-→ Historical daily Brent oil prices from **May 20, 1987** to **September 30, 2022**.
-
-📁 **`events.csv`**
-→ A hand-curated list of **major global events**, including:
-
-* Date
-* Name
-* Type (e.g., geopolitical, economic shock)
-* Short description of impact on the oil market
-
----
-
-## 4️⃣ Setup and Installation
-
-🧪 This project uses **Python** with a **virtual environment** for managing dependencies.
+This project uses **Python 🐍** with a virtual environment 🧪 for managing dependencies.
 
 ### ✅ Step 1: Create and Activate the Virtual Environment
 
 ```bash
-# Create virtual environment
+# Create the virtual environment
 python -m venv venv
 
-# Activate (macOS/Linux)
+# Activate it (on macOS/Linux) 🐧
 source venv/bin/activate
 
-# Activate (Windows)
+# Or on Windows 🪟
 venv\Scripts\activate
 ```
 
-### ✅ Step 2: Install Dependencies
+### ✅ Step 2: Install Required Libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-📝 If `requirements.txt` doesn’t exist yet, create it using:
-
-```bash
-pip freeze > requirements.txt
-```
+📦 Note: The `requirements.txt` file contains all necessary packages like `pandas`, `pymc`, `arviz`, `matplotlib`, and `jupyter`.
 
 ---
 
-## 5️⃣ How to Run the Analysis
+## 3️⃣ **Project Status & Roadmap**
 
-💡 The initial exploration is done in a **Jupyter Notebook**.
+The project is divided into three main phases. The **initial foundational work** (Task 1) is complete, and we are moving toward modeling. 🚀
 
-🔧 Ensure your virtual environment is activated, and all libraries are installed.
-
-### 📓 Launch Jupyter:
-
-```bash
-jupyter lab
-```
-
-Then:
-
-* Navigate to the `notebooks/` directory.
-* Open `01_data_exploration.ipynb`
-* Run the notebook to load data, visualize trends, and perform stationarity tests.
+* \[✅] **Task 1:** Foundational Analysis & Planning
+  → Defined workflow, researched events, documented assumptions
+* \[⏳] **Task 2:** Change Point Modeling (Next Step)
+  → Implement Bayesian models using PyMC to detect breaks
+* \[⬜] **Task 3:** Interactive Dashboard (Future Work)
+  → Build a Flask + React interface to explore results
 
 ---
 
-## 6️⃣ Project Roadmap
+## 4️⃣ **Task 1 Deliverable: The Analytical Framework**
 
-This project will be completed in **three main phases**:
+This section covers the major outputs from the foundational analysis phase.
 
-### 📌 Task 1: Foundational Analysis *(In Progress)*
+---
 
-* Define the data analysis workflow ✅
-* Research and compile event data into `events.csv` ✅
-* Perform initial EDA on the oil price time series
-* Finalize interim report for Phase 1
+### 4.1 📅 **Compiled Event Data**
 
-### 📌 Task 2: Change Point Modeling
+A core part of this task was researching major events relevant to the oil market.
 
-* Implement Bayesian Change Point models using **PyMC**
-* Detect statistically significant change points in the series
-* Match these to known events from `events.csv`
-* Quantify effects on **price level**, **volatility**, etc.
+* **📂 Action:** A structured dataset (`data/compiled/events.csv`) contains **20+ key events** from 1987 to 2022.
+* **📌 Purpose:** Provides real-world context for interpreting change points, and supports forming analytical hypotheses. 🧠
 
-### 📌 Task 3: Interactive Dashboard
+---
 
-* Build a **Flask** backend to serve the results
-* Develop a **React** frontend dashboard
-* Create visual tools for exploring:
+### 4.2 🗺️ **Defined Data Analysis Workflow**
 
-  * Prices
-  * Events
-  * Change points
-* 🎯 Enable stakeholder-driven insight discovery
+A step-by-step plan from raw data to insights:
+
+1. **🧹 Data Preparation and EDA:**
+   Load, clean, visualize, and transform the data (e.g., log returns); test for stationarity.
+2. **🤔 Event Hypothesis Formulation:**
+   Use `events.csv` to hypothesize structural breaks around known impactful events (e.g., 2008 Crisis).
+3. **⚙️ Bayesian Change Point Modeling:**
+   Implement a PyMC model to infer structural changes in mean/variance of oil prices.
+4. **💡 Insight Generation & Impact Quantification:**
+   Compare detected breaks with known events. Quantify "before vs. after" shifts.
+5. **📤 Communication and Delivery:**
+   Consolidate findings in a report + dashboard for stakeholder insights.
+
+---
+
+### 4.3 ⚠️ **Identified Assumptions and Limitations**
+
+Acknowledging the boundaries of the analysis is essential.
+
+#### 🔑 Key Assumptions:
+
+* **📅 Event Proximity:** Market reacts near the public date of an event.
+* **📉 Model Simplicity:** Initial model assumes discrete, instant changes.
+* **🧾 Data Coverage:** Events dataset captures the most critical events.
+* **📊 Parameter Stability:** Statistical properties remain consistent between change points.
+
+#### 🔍 Limitations: Correlation ≠ Causation ❗️
+
+* **✅ What the model gives:**
+  Probabilities of structural breaks. If aligned with events, it shows strong **temporal correlation** 🔗.
+* **🚫 What it doesn't give:**
+  Proof that an event **caused** the price shift. Correlation may be spurious or influenced by unseen variables.
+
+🔬 *Proving causality is outside this project’s scope.*
+Our goal: provide **data-driven evidence** to **support or challenge hypotheses** about event impacts. 🎯
