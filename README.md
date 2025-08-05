@@ -101,42 +101,6 @@ A core part of this task was researching major events relevant to the oil market
 
 ---
 
-## 6️⃣ **Data Exploration & EDA**
-
-This phase involved a thorough exploration and cleaning of the Brent Oil Prices dataset, leveraging custom utility functions from `src/utils.py` and detailed analysis in the notebook `notebooks/01_eda_exploration.ipynb`.
-
-### 6.1 **Data Loading & Inspection**
-
-- Data is loaded using the `load_data` function from `src/utils.py`.
-- The dataset contains 9,011 rows with two columns: `Date` and `Price`, with no missing values.
-
-### 6.2 **Date Format Analysis**
-
-- Two date formats identified in the `Date` column:
-    - `ddmmyy` (e.g., `20-May-87`): 8,360 entries
-    - `mmddyy` (e.g., `Nov 08, 2022`): 651 entries
-- No entries in other formats, ensuring consistency.
-
-### 6.3 **Data Cleaning & Preparation**
-
-- The `Date` column is cleaned and converted to datetime objects, then set as the DataFrame index.
-- Data is sorted chronologically for time series analysis.
-
-### 6.4 **Visualization & Stationarity Testing**
-
-- The raw price series is plotted, showing clear trends and volatility.
-- Daily log returns are calculated and visualized, appearing stationary and centered around zero.
-- Augmented Dickey-Fuller (ADF) tests:
-    - **Raw Price Series:** Non-stationary (p-value > 0.05)
-    - **Log Return Series:** Stationary (p-value << 0.05)
-
-### 6.5 **Key Insights**
-
-- The dataset is clean and well-structured for time series analysis.
-- The price series is non-stationary, while log returns are stationary, which is typical for financial time series.
-- This EDA sets the stage for further modeling and forecasting tasks.
-
----
 
 ### 5.2 🗺️ **Defined Data Analysis Workflow**
 
@@ -175,3 +139,72 @@ Acknowledging the boundaries of the analysis is essential.
 
 🔬 *Proving causality is outside this project’s scope.*
 Our goal: provide **data-driven evidence** to **support or challenge hypotheses** about event impacts. 🎯
+## 6️⃣ **Data Exploration & EDA**
+
+This phase involved a thorough exploration and cleaning of the Brent Oil Prices dataset, leveraging custom utility functions from `src/utils.py` and detailed analysis in the notebook `notebooks/01_eda_exploration.ipynb`.
+
+### 6.1 **Data Loading & Inspection**
+
+- Data is loaded using the `load_data` function from `src/utils.py`.
+- The dataset contains 9,011 rows with two columns: `Date` and `Price`, with no missing values.
+
+### 6.2 **Date Format Analysis**
+
+- Two date formats identified in the `Date` column:
+    - `ddmmyy` (e.g., `20-May-87`): 8,360 entries
+    - `mmddyy` (e.g., `Nov 08, 2022`): 651 entries
+- No entries in other formats, ensuring consistency.
+
+### 6.3 **Data Cleaning & Preparation**
+
+- The `Date` column is cleaned and converted to datetime objects, then set as the DataFrame index.
+- Data is sorted chronologically for time series analysis.
+
+### 6.4 **Visualization & Stationarity Testing**
+
+- The raw price series is plotted, showing clear trends and volatility.
+- Daily log returns are calculated and visualized, appearing stationary and centered around zero.
+- Augmented Dickey-Fuller (ADF) tests:
+    - **Raw Price Series:** Non-stationary (p-value > 0.05)
+    - **Log Return Series:** Stationary (p-value << 0.05)
+
+### 6.5 **Key Insights**
+
+- The dataset is clean and well-structured for time series analysis.
+- The price series is non-stationary, while log returns are stationary, which is typical for financial time series.
+- This EDA sets the stage for further modeling and forecasting tasks.
+
+---
+
+---
+
+## 7️⃣ **Bayesian Change Point Analysis**
+
+This phase applies Bayesian modeling (using PyMC) to detect structural breaks in the Brent Oil Price time series. The approach allows for probabilistic inference of change points, quantifying uncertainty and providing interpretable results.
+
+### 7.1 **Modeling Approach**
+
+- A Bayesian change point model is implemented to identify points in time where the statistical properties (mean, variance) of the price or log return series shift.
+- The model uses Markov Chain Monte Carlo (MCMC) sampling to estimate the posterior distribution of change points.
+- Prior information from the compiled events dataset is used to inform hypotheses about likely break dates.
+
+### 7.2 **Key Results & Insights**
+
+- Several statistically significant change points are detected, many of which align closely with major geopolitical or economic events (e.g., 2008 financial crisis, OPEC decisions).
+- The model quantifies the magnitude of shifts in mean and volatility before and after each change point.
+- Posterior probability plots provide a visual summary of uncertainty around break dates.
+- These results support the hypothesis that external events have a measurable impact on oil price dynamics.
+
+### 7.3 **Implications for Stakeholders**
+
+- The Bayesian approach provides a robust framework for understanding market regime shifts.
+- Insights can inform risk management, investment strategy, and policy decisions for energy sector stakeholders.
+- The methodology is extensible to other time series and event-driven analyses.
+
+### 7.4 **Summary & Recommendations**
+
+- The Bayesian analysis confirms that Brent oil prices experience distinct structural breaks, often coinciding with major global events.
+- Quantitative results from the model highlight periods of increased volatility and regime shifts, which are critical for forecasting and scenario planning.
+- Stakeholders should monitor identified change points and associated events to better anticipate market movements and adjust strategies accordingly.
+
+---
