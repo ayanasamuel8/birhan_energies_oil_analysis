@@ -208,3 +208,32 @@ This phase applies Bayesian modeling (using PyMC) to detect structural breaks in
 - Stakeholders should monitor identified change points and associated events to better anticipate market movements and adjust strategies accordingly.
 
 ---
+
+## 🖥️ Interactive Dashboard & API Integration
+
+This project includes a full-stack solution for exploring Brent oil price data and market events:
+
+### 🌐 API (Flask, `src/app.py`)
+
+- **Endpoints:**
+  - `/api/price-data`: Returns daily price and log return data for Brent oil.
+  - `/api/events`: Returns a list of major market events with dates and descriptions.
+  - `/api/changepoint`: Returns the results of Bayesian changepoint analysis (e.g., volatility shifts).
+- **Data Processing:**
+  - Loads cleaned price and event data from CSV files.
+  - Calculates log returns for volatility analysis.
+  - Serves all data in JSON format for easy frontend consumption.
+
+### 🖼️ UI (React, `frontend/src/App.tsx`)
+
+- **Features:**
+  - Date range selection for filtering displayed data.
+  - Interactive line chart showing price and volatility, with:
+    - Key events marked by vertical lines and labels.
+    - Bayesian changepoint periods highlighted with shaded regions.
+  - Summary card displaying key findings (e.g., volatility increase during the 2008 GFC).
+- **Integration:**
+  - Fetches all data from the Flask API endpoints.
+  - Responsive and user-friendly interface for data exploration.
+
+---

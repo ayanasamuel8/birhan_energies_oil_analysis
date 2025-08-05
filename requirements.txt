@@ -8,5 +8,5 @@ ipykernel
 arviz
 statsmodels
 # statsmodels
-# flask
-# flask-cors
+flask
+flask-cors
