@@ -51,24 +51,31 @@ pip install -r requirements.txt
 The repository is organized to separate data, notebooks, and source code for clarity.
 
 ```
+```
 birhan_energies_oil_analysis/
 ├── 📂 data/
-│   ├── 📄 compiled/
-│   │   └── events.csv         # Compiled list of major geopolitical/economic events
-│   └── 📄 raw/
-│       └── brent_prices.csv   # Raw Brent oil price time series data
+│   ├── 📂 compiled/
+│   │   └── 📄 events.csv         # Compiled list of major geopolitical/economic events
+│   └── 📂 raw/
+│       └── 📄 brent_prices.csv   # Raw Brent oil price time series data
+│
+├── 📂 frontend/
+│   └── 📂 src/
+│       └── 🖼️ App.tsx            # React component for the interactive UI
 │
 ├── 📂 notebooks/
-│   ├── 📓 01_data_preparation_and_eda.ipynb
-│   └── 📓 02_bayesian_changepoint_model.ipynb
+│   ├── 📓 01_eda_exploration.ipynb          # Exploratory Data Analysis and visualization
+│   └── 📓 02_bayesian_changepoint_model.ipynb # Bayesian modeling implementation
 │
 ├── 📂 src/
-│   └── # Python source code for models or utilities (if any)
+│   ├── 🐍 app.py               # Flask API for serving data to the frontend
+│   └── 🐍 utils.py             # Utility functions for data loading and cleaning
 │
 ├── 📜 .gitignore
 ├── 📜 README.md              # You are here!
 ├── 📜 requirements.txt        # Project dependencies
 └── 🧪 venv/                    # Virtual environment directory
+```
 ```
 
 ---
