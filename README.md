@@ -200,3 +200,11 @@ This phase applies Bayesian modeling (using PyMC) to detect structural breaks in
 - The Bayesian approach provides a robust framework for understanding market regime shifts.
 - Insights can inform risk management, investment strategy, and policy decisions for energy sector stakeholders.
 - The methodology is extensible to other time series and event-driven analyses.
+
+### 7.4 **Summary & Recommendations**
+
+- The Bayesian analysis confirms that Brent oil prices experience distinct structural breaks, often coinciding with major global events.
+- Quantitative results from the model highlight periods of increased volatility and regime shifts, which are critical for forecasting and scenario planning.
+- Stakeholders should monitor identified change points and associated events to better anticipate market movements and adjust strategies accordingly.
+
+---
