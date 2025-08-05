@@ -1,69 +1,55 @@
-# React + TypeScript + Vite
+# 📊 Brent Oil Price Analysis Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern dashboard built with **React**, **TypeScript**, and **Vite** for interactive exploration of Brent oil prices, volatility, and major market events.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **📅 Date Range Filtering:**
+  - Select start and end dates to filter the time series data displayed.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **📈 Data Visualization:**
+  - Line chart of daily Brent oil prices and log returns (volatility).
+  - Key events are marked with vertical lines and labels.
+  - Bayesian changepoint periods are highlighted with shaded regions and descriptions.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **🔗 API Integration:**
+  - Fetches price data, event data, and changepoint analysis from a Flask backend.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **📝 Summary Card:**
+  - Displays key findings, such as detected volatility shifts and their timing (e.g., during the 2008 Global Financial Crisis).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Technologies Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- ⚛️ React, TypeScript, Vite
+- 📊 recharts (for charting)
+- 📆 react-datepicker (for date selection)
+- 🔗 axios (for API requests)
+- 🐍 Flask backend (for data serving)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📦 How It Works
+
+1. **Select a date range** to filter the data.
+2. **View interactive charts** showing price and volatility, with key events and changepoint periods highlighted.
+3. **Read summary insights** about market regime shifts and volatility transitions.
+
+---
+
+## 🖥️ Quick Start
+
+1. Start the Flask backend server.
+2. Run the React frontend with Vite.
+3. Open the dashboard in your browser and explore!
+
+---
+
+## 💡 Example Insight
+
+> A **Daily Volatility Increase** of **57.89%** was detected during the transition period from 2008-05-19 to 2008-08-21, coinciding with the build-up to the 2008 Global Financial Crisis.
+
+---
