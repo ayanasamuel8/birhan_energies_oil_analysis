@@ -1,7 +1,6 @@
 # 📈 **Analysis of Brent Oil Prices: Identifying Structural Breaks with Bayesian Change Point Models**
 
 **🏢 Project for:** Birhan Energies
-**📌 Status:** Phase 1 (Foundational Analysis) ✅ *Complete*
 
 ---
 
@@ -51,7 +50,6 @@ pip install -r requirements.txt
 The repository is organized to separate data, notebooks, and source code for clarity.
 
 ```
-```
 birhan_energies_oil_analysis/
 ├── 📂 data/
 │   ├── 📂 compiled/
@@ -75,7 +73,6 @@ birhan_energies_oil_analysis/
 ├── 📜 README.md              # You are here!
 ├── 📜 requirements.txt        # Project dependencies
 └── 🧪 venv/                    # Virtual environment directory
-```
 ```
 
 ---
